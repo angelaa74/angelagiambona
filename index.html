@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angela Giambona · No-Code Developer &amp; UX Architect | Bubble, AI, Neuromarketing</title>
+  <meta name="description" content="Sviluppo SaaS e applicazioni no-code su Bubble.io, integrazioni AI (Claude, n8n) e UX progettata sui modelli mentali dell'utente. Psicologa cognitiva e neuropsicologa a Palermo. Consulenza gratuita." />
+  <link rel="canonical" href="https://www.angelagiambona.it/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Angela Giambona · No-Code Developer & UX Architect" />
+  <meta property="og:description" content="Software no-code progettato sui reali modelli mentali dei tuoi utenti. Bubble.io, AI e neuromarketing." />
+  <meta property="og:url" content="https://www.angelagiambona.it/" />
+  <!-- SEGNAPOSTO: carica un'immagine 1200x630 (es. /og-image.jpg) e decommenta -->
+  <!-- <meta property="og:image" content="https://www.angelagiambona.it/og-image.jpg" /> -->
+  <meta name="theme-color" content="#14171F" />
+
+  <!-- SEGNAPOSTO: favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314171F'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23FF6B4A'>ag</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Dati strutturati per Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Angela Giambona",
+    "jobTitle": "No-Code Developer & UX Architect",
+    "url": "https://www.angelagiambona.it/",
+    "email": "mailto:a.giambona@hotmail.it",
+    "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressCountry": "IT" },
+    "sameAs": ["https://www.linkedin.com/in/angelagiambona/"],
+    "knowsAbout": ["Bubble.io", "No-Code", "UX Design", "Neuromarketing", "Psicologia cognitiva", "Neuropsicologia", "AI integration", "SEO"]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       DESIGN TOKENS
+       Palette: inchiostro notturno + carta calda + corallo "sinapsi"
+       ========================================================= */
+    :root {
+      --ink: #14171F;
+      --ink-2: #1E2230;
+      --ink-3: #2A2F40;
+      --paper: #F5F1EA;
+      --paper-2: #EDE7DC;
+      --line: #D9D1C3;
+      --muted: #5E6170;
+      --muted-dark: #9A9DAB;
+      --accent: #FF6B4A;      /* corallo sinapsi */
+      --accent-deep: #E2502F;
+      --teal: #3E8E87;        /* secondario: calma / fiducia */
+      --white: #FFFFFF;
+
+      --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+      --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+      --radius: 18px;
+      --radius-sm: 10px;
+      --max: 1180px;
+      --nav-h: 72px;
+      --ease: cubic-bezier(.22,.8,.24,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+    .skip-link {
+      position: absolute; left: 12px; top: -60px; z-index: 200;
+      background: var(--accent); color: var(--ink); padding: 10px 16px; border-radius: 8px;
+      font-weight: 700; text-decoration: none; transition: top .2s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    .container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+
+    /* ---------- Tipografia ---------- */
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; margin: 0; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(2.6rem, 7.2vw, 5.4rem); font-variation-settings: "opsz" 144; }
+    h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-variation-settings: "opsz" 120; }
+    h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-variation-settings: "opsz" 48; }
+    em.serif { font-style: italic; font-weight: 400; color: var(--accent); }
+    p { margin: 0 0 1em; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      display: inline-flex; align-items: center; gap: .6em;
+      margin-bottom: 1.2rem;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    .lead { font-size: clamp(1.1rem, 1.6vw, 1.28rem); color: var(--muted); max-width: 62ch; }
+
+    /* ---------- Bottoni (CTA) ---------- */
+    .btn {
+      --bg: var(--accent); --fg: var(--ink);
+      display: inline-flex; align-items: center; gap: .65em;
+      padding: .95em 1.5em;
+      border-radius: 999px;
+      background: var(--bg); color: var(--fg);
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      border: 1.5px solid var(--bg);
+      cursor: pointer;
+      position: relative; overflow: hidden; isolation: isolate;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s, color .3s;
+    }
+    .btn::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(120px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.45), transparent 60%);
+      opacity: 0; transition: opacity .3s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -12px rgba(255,107,74,.65); }
+    .btn:hover::after { opacity: 1; }
+    .btn .arrow { transition: transform .3s var(--ease); }
+    .btn:hover .arrow { transform: translateX(4px); }
+    .btn--ghost { --bg: transparent; --fg: currentColor; border-color: currentColor; }
+    .btn--ghost:hover { box-shadow: none; background: rgba(255,255,255,.06); }
+    .btn--dark { --bg: var(--ink); --fg: var(--paper); }
+    .btn--dark:hover { box-shadow: 0 12px 28px -12px rgba(20,23,31,.6); }
+
+    /* =========================================================
+       NAVIGAZIONE FISSA
+       ========================================================= */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      height: var(--nav-h);
+      display: flex; align-items: center;
+      transition: background .35s, box-shadow .35s, color .35s;
+      color: var(--paper);
+    }
+    .nav.is-scrolled {
+      background: rgba(245,241,234,.86);
+      backdrop-filter: saturate(1.4) blur(14px);
+      -webkit-backdrop-filter: saturate(1.4) blur(14px);
+      box-shadow: 0 1px 0 var(--line);
+      color: var(--ink);
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 700; letter-spacing: -.01em; }
+    .brand__mark {
+      width: 38px; height: 38px; border-radius: 11px;
+      display: grid; place-items: center;
+      background: var(--accent); color: var(--ink);
+      font-family: var(--font-display); font-style: italic; font-size: 1.2rem; font-weight: 600;
+    }
+    .brand__name small { display: block; font-family: var(--font-mono); font-weight: 400; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; opacity: .65; }
+
+    .nav__links { display: none; list-style: none; margin: 0; padding: 0; gap: .3rem; }
+    .nav__links a {
+      text-decoration: none; font-size: .93rem; font-weight: 600;
+      padding: .5em .85em; border-radius: 999px; position: relative;
+      opacity: .78; transition: opacity .2s, background .2s;
+    }
+    .nav__links a:hover { opacity: 1; }
+    .nav__links a.is-active { opacity: 1; background: rgba(255,107,74,.16); }
+    .nav__cta { display: none; padding: .7em 1.2em; font-size: .9rem; }
+
+    .nav__toggle {
+      width: 46px; height: 46px; border-radius: 12px; border: 1.5px solid currentColor;
+      background: transparent; color: inherit; cursor: pointer;
+      display: grid; place-items: center;
+    }
+    .nav__toggle span, .nav__toggle span::before, .nav__toggle span::after {
+      display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px;
+      transition: transform .3s var(--ease), opacity .2s; position: relative;
+    }
+    .nav__toggle span::before, .nav__toggle span::after { content: ""; position: absolute; left: 0; }
+    .nav__toggle span::before { top: -6px; }
+    .nav__toggle span::after { top: 6px; }
+    .nav.is-open .nav__toggle span { background: transparent; }
+    .nav.is-open .nav__toggle span::before { transform: translateY(6px) rotate(45deg); }
+    .nav.is-open .nav__toggle span::after { transform: translateY(-6px) rotate(-45deg); }
+
+    /* menu mobile */
+    .mobile-menu {
+      position: fixed; inset: var(--nav-h) 0 0 0; z-index: 99;
+      background: var(--ink); color: var(--paper);
+      padding: 2rem 1.25rem 3rem;
+      display: flex; flex-direction: column; gap: .25rem;
+      transform: translateY(-8px); opacity: 0; visibility: hidden;
+      transition: opacity .3s, transform .35s var(--ease), visibility .3s;
+    }
+    .nav.is-open + .mobile-menu { opacity: 1; transform: none; visibility: visible; }
+    .mobile-menu a.m-link {
+      font-family: var(--font-display); font-size: 2rem; text-decoration: none;
+      padding: .35rem 0; border-bottom: 1px solid var(--ink-3);
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .mobile-menu a.m-link span { font-family: var(--font-mono); font-size: .75rem; color: var(--muted-dark); }
+    .mobile-menu .btn { margin-top: 2rem; align-self: flex-start; }
+    body.menu-open { overflow: hidden; }
+
+    @media (min-width: 960px) {
+      .nav__links { display: flex; }
+      .nav__cta { display: inline-flex; }
+      .nav__toggle, .mobile-menu { display: none; }
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      position: relative; overflow: hidden;
+      background: var(--ink); color: var(--paper);
+      min-height: 100svh;
+      display: flex; align-items: center;
+      padding: calc(var(--nav-h) + 3rem) 0 4rem;
+    }
+    #synapse { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .9; }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(60% 60% at 85% 20%, rgba(255,107,74,.18), transparent 70%),
+        radial-gradient(50% 50% at 10% 90%, rgba(62,142,135,.18), transparent 70%),
+        linear-gradient(180deg, transparent 60%, rgba(20,23,31,.9));
+    }
+    .hero__content { position: relative; z-index: 2; }
+    .hero .eyebrow { color: var(--accent); }
+    .hero h1 { max-width: none; }
+    .hero h1 .line { display: block; overflow: hidden; }
+    .hero h1 .line > span { display: inline-block; transform: translateY(105%); animation: rise .9s var(--ease) forwards; }
+    .hero h1 .line:nth-child(2) > span { animation-delay: .12s; }
+    .hero h1 .line:nth-child(3) > span { animation-delay: .24s; }
+    @keyframes rise { to { transform: none; } }
+
+    .hero__sub { margin-top: 1.6rem; color: #C9CBD4; max-width: 56ch; font-size: clamp(1.05rem, 1.5vw, 1.22rem); }
+    .hero__ctas { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.2rem; }
+    .hero__meta {
+      margin-top: 3.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem 2rem;
+      border-top: 1px solid var(--ink-3); padding-top: 1.8rem; max-width: 760px;
+    }
+    .stat__num { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1; color: var(--paper); }
+    .stat__num sup { font-size: .5em; color: var(--accent); }
+    .stat__label { font-size: .86rem; color: var(--muted-dark); margin-top: .4rem; }
+    @media (min-width: 720px) { .hero__meta { grid-template-columns: repeat(4, 1fr); } }
+
+    .scroll-cue {
+      position: absolute; z-index: 2; bottom: 1.6rem; left: 50%; transform: translateX(-50%);
+      font-family: var(--font-mono); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted-dark); text-decoration: none; display: none; flex-direction: column; align-items: center; gap: .5rem;
+    }
+    .scroll-cue i { width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); animation: cue 2s infinite; }
+    @keyframes cue { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+    @media (min-width: 720px) and (min-height: 980px) { .scroll-cue { display: flex; } }
+
+    /* =========================================================
+       SEZIONI GENERICHE
+       ========================================================= */
+    section { padding: clamp(5rem, 10vw, 8rem) 0; }
+    .section-head { display: grid; gap: 1.2rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    @media (min-width: 900px) {
+      .section-head--split { grid-template-columns: 1.1fr 1fr; align-items: end; gap: 3rem; }
+    }
+    .dark { background: var(--ink); color: var(--paper); }
+    .dark .lead { color: #B9BCC7; }
+    .dark .eyebrow { color: var(--accent); }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: .08s; }
+    .reveal[data-delay="2"] { transition-delay: .16s; }
+    .reveal[data-delay="3"] { transition-delay: .24s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero h1 .line > span { transform: none; animation: none; }
+    }
+
+    /* =========================================================
+       CHI SONO
+       ========================================================= */
+    .about { display: grid; gap: 3rem; }
+    @media (min-width: 900px) { .about { grid-template-columns: .85fr 1.15fr; gap: 5rem; align-items: start; } }
+
+    .portrait {
+      position: relative; aspect-ratio: 4/5; border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,107,74,.35), transparent 55%),
+        radial-gradient(circle at 75% 80%, rgba(62,142,135,.35), transparent 55%),
+        var(--ink);
+      overflow: hidden; color: var(--paper);
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .portrait__placeholder {
+      position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem;
+      font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--muted-dark);
+    }
+    .portrait__badge {
+      position: absolute; left: 1rem; bottom: 1rem; right: 1rem;
+      background: rgba(245,241,234,.94); color: var(--ink);
+      border-radius: 14px; padding: .9rem 1.1rem;
+      display: flex; align-items: center; gap: .8rem; font-size: .9rem; line-height: 1.35;
+    }
+    .pulse { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); flex: none; box-shadow: 0 0 0 0 rgba(62,142,135,.6); animation: pulse 2s infinite; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(62,142,135,0); } 100% { box-shadow: 0 0 0 0 rgba(62,142,135,0); } }
+
+    .about__text h2 { margin-bottom: 1.6rem; }
+    .about__text p { color: #3B3E4A; }
+    .pillars { display: grid; gap: 1rem; margin-top: 2.2rem; }
+    @media (min-width: 640px) { .pillars { grid-template-columns: repeat(3, 1fr); } }
+    .pillar { border-top: 2px solid var(--ink); padding-top: 1rem; }
+    .pillar b { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; margin-bottom: .35rem; }
+    .pillar span { font-size: .93rem; color: var(--muted); }
+
+    /* =========================================================
+       APPROCCIO (UX cognitiva)
+       ========================================================= */
+    .approach { display: grid; gap: 1px; background: var(--ink-3); border: 1px solid var(--ink-3); border-radius: var(--radius); overflow: hidden; }
+    @media (min-width: 820px) { .approach { grid-template-columns: repeat(3, 1fr); } }
+    .approach__item { background: var(--ink); padding: 2.2rem 1.8rem 2.4rem; position: relative; transition: background .4s; }
+    .approach__item:hover { background: var(--ink-2); }
+    .approach__num { font-family: var(--font-mono); font-size: .78rem; color: var(--accent); letter-spacing: .1em; }
+    .approach__item h3 { margin: 1.4rem 0 .8rem; }
+    .approach__item p { color: #B9BCC7; font-size: .98rem; margin: 0; }
+    .approach__icon { width: 46px; height: 46px; margin-top: 1.4rem; color: var(--accent); }
+
+    .quote-band {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      font-family: var(--font-display); font-weight: 300; font-style: italic;
+      font-size: clamp(1.5rem, 3.2vw, 2.4rem); line-height: 1.3; max-width: 28ch;
+    }
+    .quote-band strong { font-weight: 500; font-style: normal; color: var(--accent); }
+
+    /* =========================================================
+       SERVIZI
+       ========================================================= */
+    .services { display: grid; gap: 1.2rem; }
+    @media (min-width: 760px) { .services { grid-template-columns: repeat(2, 1fr); } }
+    .service {
+      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 2rem 1.8rem; position: relative; overflow: hidden;
+      transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .3s;
+      transform-style: preserve-3d;
+    }
+    .service:hover { box-shadow: 0 30px 60px -30px rgba(20,23,31,.35); border-color: transparent; }
+    .service::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 0%), rgba(255,107,74,.10), transparent 45%);
+      opacity: 0; transition: opacity .4s;
+    }
+    .service:hover::before { opacity: 1; }
+    .service__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.4rem; }
+    .service__icon {
+      width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--paper); color: var(--accent-deep);
+    }
+    .service__icon svg { width: 26px; height: 26px; }
+    .service__tag { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .service h3 { margin-bottom: .7rem; }
+    .service p { color: var(--muted); font-size: .98rem; }
+    .service ul { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: .5rem; }
+    .service li { display: flex; gap: .6rem; font-size: .95rem; }
+    .service li::before { content: "→"; color: var(--accent-deep); font-weight: 700; flex: none; }
+
+    .packages { margin-top: 1.2rem; display: grid; gap: .5rem; }
+    .package { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem .9rem; border-radius: var(--radius-sm); background: var(--paper); font-size: .92rem; }
+    .package b { font-weight: 700; }
+    .package span { color: var(--muted); text-align: right; }
+
+    /* =========================================================
+       PROGETTI
+       ========================================================= */
+    .projects { display: grid; gap: 1.5rem; }
+    .project {
+      display: grid; gap: 0; border-radius: var(--radius); overflow: hidden;
+      background: var(--white); border: 1px solid var(--line);
+    }
+    @media (min-width: 900px) {
+      .project { grid-template-columns: 1fr 1.1fr; }
+      .project:nth-child(even) .project__visual { order: 2; }
+    }
+    .project__visual {
+      min-height: 280px; position: relative; overflow: hidden;
+      background: var(--ink); color: var(--paper);
+      display: grid; place-items: center; padding: 2rem;
+    }
+    .project__visual--a { background: linear-gradient(140deg, #14171F 0%, #2A1E22 100%); }
+    .project__visual--b { background: linear-gradient(140deg, #14171F 0%, #17302E 100%); }
+    .project__visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+    /* mockup schematico di una dashboard (sostituibile con screenshot reale) */
+    .mock {
+      width: min(100%, 420px); aspect-ratio: 16/11; border-radius: 12px;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+      padding: 14px; display: grid; grid-template-rows: auto 1fr; gap: 12px;
+      transform: perspective(900px) rotateY(-8deg) rotateX(4deg);
+      transition: transform .6s var(--ease);
+      box-shadow: 0 40px 80px -30px rgba(0,0,0,.6);
+    }
+    .project:hover .mock { transform: perspective(900px) rotateY(0) rotateX(0); }
+    .mock__bar { display: flex; gap: 6px; }
+    .mock__bar i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.18); }
+    .mock__body { display: grid; grid-template-columns: 1fr 2.4fr; gap: 10px; }
+    .mock__side { display: grid; gap: 8px; align-content: start; }
+    .mock__side i { height: 9px; border-radius: 4px; background: rgba(255,255,255,.1); }
+    .mock__side i:first-child { background: var(--accent); width: 70%; }
+    .mock__main { display: grid; grid-template-rows: auto 1fr; gap: 10px; }
+    .mock__kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .mock__kpis i { height: 38px; border-radius: 8px; background: rgba(255,255,255,.07); }
+    .mock__chart { border-radius: 8px; background: rgba(255,255,255,.05); position: relative; overflow: hidden; }
+    .mock__chart svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .project__visual--b .mock__side i:first-child { background: var(--teal); }
+
+    .project__body { padding: clamp(1.8rem, 4vw, 3rem); }
+    .project__label { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); }
+    .project h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: .6rem 0 .3rem; }
+    .project__desc { color: var(--muted); }
+    .project ul { padding: 0; margin: 1.2rem 0 1.6rem; list-style: none; display: grid; gap: .7rem; }
+    .project li { padding-left: 1.4rem; position: relative; font-size: .97rem; }
+    .project li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.6rem; }
+    .chip { font-family: var(--font-mono); font-size: .74rem; padding: .35em .75em; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); }
+    .link-arrow { font-weight: 700; text-decoration: none; display: inline-flex; gap: .5rem; align-items: center; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .link-arrow:hover .arrow { transform: translate(3px,-3px); }
+    .link-arrow .arrow { transition: transform .3s var(--ease); }
+
+    /* =========================================================
+       TECH STACK (marquee)
+       ========================================================= */
+    .stack { padding: clamp(3.5rem, 7vw, 5rem) 0; border-block: 1px solid var(--line); overflow: hidden; background: var(--paper-2); }
+    .stack__title { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 1.8rem; }
+    .marquee { display: flex; gap: 1rem; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee:hover { animation-play-state: paused; }
+    .marquee-wrap { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+    .tool {
+      white-space: nowrap; padding: .75em 1.3em; border-radius: 999px; background: var(--white); border: 1px solid var(--line);
+      font-weight: 600; font-size: .98rem; display: inline-flex; gap: .55rem; align-items: center;
+    }
+    .tool small { font-family: var(--font-mono); font-size: .68rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } .marquee [aria-hidden="true"] { display: none; } }
+
+    .stack-grid { display: grid; gap: 1rem; margin-top: 2.5rem; }
+    @media (min-width: 760px) { .stack-grid { grid-template-columns: repeat(5, 1fr); } }
+    .stack-col h4 { margin: 0 0 .5rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); font-weight: 500; }
+    .stack-col p { margin: 0; font-size: .95rem; color: var(--ink); }
+
+    /* =========================================================
+       PERCORSO (timeline)
+       ========================================================= */
+    .journey { display: grid; gap: 3rem; }
+    @media (min-width: 960px) { .journey { grid-template-columns: 1.15fr 1fr; gap: 4.5rem; } }
+    .journey h3.col-title { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-dark); font-weight: 500; margin-bottom: 1.6rem; }
+    .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: var(--ink-3); }
+    .timeline li { position: relative; padding: 0 0 2.2rem 2.4rem; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: 0; top: .45em; width: 15px; height: 15px; border-radius: 50%;
+      background: var(--ink); border: 2px solid var(--accent);
+      transition: background .3s, box-shadow .3s;
+    }
+    .timeline li:hover::before { background: var(--accent); box-shadow: 0 0 0 6px rgba(255,107,74,.18); }
+    .tl-date { font-family: var(--font-mono); font-size: .76rem; color: var(--accent); letter-spacing: .06em; }
+    .tl-role { font-family: var(--font-display); font-size: 1.3rem; margin: .2rem 0 .1rem; line-height: 1.25; }
+    .tl-org { font-size: .9rem; color: var(--muted-dark); margin-bottom: .5rem; }
+    .tl-desc { font-size: .95rem; color: #B9BCC7; margin: 0; }
+
+    .edu { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
+    .edu li { border: 1px solid var(--ink-3); border-radius: 14px; padding: 1.1rem 1.2rem; transition: border-color .3s, transform .3s var(--ease); }
+    .edu li:hover { border-color: var(--accent); transform: translateX(4px); }
+    .edu b { display: block; font-weight: 600; line-height: 1.35; }
+    .edu span { display: block; font-size: .88rem; color: var(--muted-dark); margin-top: .25rem; }
+    .certs { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.4rem; }
+    .cert { font-size: .85rem; padding: .45em .9em; border-radius: 999px; background: rgba(255,107,74,.12); color: #FFD3C8; border: 1px solid rgba(255,107,74,.3); }
+
+    /* =========================================================
+       CTA BAND
+       ========================================================= */
+    .cta-band { padding: clamp(4rem, 8vw, 6rem) 0; background: var(--accent); color: var(--ink); position: relative; overflow: hidden; }
+    .cta-band::before {
+      content: ""; position: absolute; width: 520px; height: 520px; right: -160px; top: -220px; border-radius: 50%;
+      border: 1px solid rgba(20,23,31,.18); box-shadow: 0 0 0 60px rgba(20,23,31,.04), 0 0 0 120px rgba(20,23,31,.03);
+    }
+    .cta-band__inner { display: grid; gap: 2rem; align-items: center; position: relative; }
+    @media (min-width: 860px) { .cta-band__inner { grid-template-columns: 1.5fr auto; } }
+    .cta-band h2 { max-width: 18ch; }
+    .cta-band p { margin: 1rem 0 0; font-size: 1.1rem; max-width: 52ch; }
+
+    /* =========================================================
+       CONTATTI
+       ========================================================= */
+    .contact { display: grid; gap: 3rem; }
+    @media (min-width: 900px) { .contact { grid-template-columns: .9fr 1.1fr; gap: 5rem; } }
+    .contact-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: .8rem; }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem; text-decoration: none;
+      padding: 1rem 1.1rem; border-radius: 14px; border: 1px solid var(--line); background: var(--white);
+      transition: border-color .3s, transform .3s var(--ease);
+    }
+    .contact-item:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .contact-item__icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--paper); color: var(--accent-deep); flex: none; }
+    .contact-item__icon svg { width: 20px; height: 20px; }
+    .contact-item small { display: block; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .contact-item b { font-weight: 600; word-break: break-all; }
+    .copy-btn {
+      margin-left: auto; font: inherit; font-size: .8rem; font-weight: 600;
+      border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: .4em .9em; cursor: pointer;
+    }
+    .copy-btn:hover { border-color: var(--ink); }
+
+    .form { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 2.6rem); display: grid; gap: 1.1rem; }
+    .field { display: grid; gap: .4rem; }
+    .field-row { display: grid; gap: 1.1rem; }
+    @media (min-width: 600px) { .field-row { grid-template-columns: 1fr 1fr; } }
+    label { font-size: .88rem; font-weight: 600; }
+    input, select, textarea {
+      font: inherit; font-size: 1rem; color: var(--ink);
+      padding: .85em 1em; border-radius: 12px; border: 1.5px solid var(--line); background: var(--paper);
+      transition: border-color .2s, background .2s, box-shadow .2s; width: 100%;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--ink); background: var(--white); box-shadow: 0 0 0 4px rgba(255,107,74,.18); }
+    textarea { min-height: 140px; resize: vertical; }
+    .consent { display: flex; gap: .7rem; align-items: flex-start; font-size: .86rem; color: var(--muted); }
+    .consent input { width: 18px; height: 18px; margin-top: .2em; accent-color: var(--accent-deep); flex: none; }
+    .form .btn { justify-self: start; }
+    .form-note { font-size: .82rem; color: var(--muted); margin: 0; }
+    .form-status { font-size: .92rem; font-weight: 600; margin: 0; min-height: 1.4em; }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer { background: var(--ink); color: var(--muted-dark); padding: 3rem 0 2.2rem; font-size: .88rem; }
+    .footer__inner { display: grid; gap: 1.5rem; }
+    @media (min-width: 760px) { .footer__inner { grid-template-columns: 1fr auto; align-items: center; } }
+    .footer .brand { color: var(--paper); }
+    .footer__links { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    .footer__links a { text-decoration: none; }
+    .footer__links a:hover { color: var(--paper); }
+    .footer__legal { border-top: 1px solid var(--ink-3); margin-top: 2rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; }
+
+    /* Toast */
+    .toast {
+      position: fixed; left: 50%; bottom: 1.5rem; transform: translate(-50%, 20px); z-index: 300;
+      background: var(--ink); color: var(--paper); padding: .8rem 1.2rem; border-radius: 999px; font-size: .9rem; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s var(--ease);
+    }
+    .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+    /* Pulsante WhatsApp flottante */
+    .wa-float {
+      position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 90;
+      width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
+      background: #25D366; color: #fff; box-shadow: 0 12px 30px -10px rgba(0,0,0,.4);
+      transform: scale(0); transition: transform .4s var(--ease);
+    }
+    .wa-float.is-visible { transform: scale(1); }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 28px; height: 28px; }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Angela Giambona, torna all'inizio">
+        <span class="brand__mark">ag</span>
+        <span class="brand__name">Angela Giambona<small>No-Code · UX · Neuro</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <ul class="nav__links">
+          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="#approccio">Approccio</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#progetti">Progetti</a></li>
+          <li><a href="#percorso">Percorso</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+      <a href="#contatti" class="btn nav__cta">Consulenza gratuita</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a class="m-link" href="#chi-sono">Chi sono <span>01</span></a>
+    <a class="m-link" href="#approccio">Approccio <span>02</span></a>
+    <a class="m-link" href="#servizi">Servizi <span>03</span></a>
+    <a class="m-link" href="#progetti">Progetti <span>04</span></a>
+    <a class="m-link" href="#percorso">Percorso <span>05</span></a>
+    <a class="m-link" href="#contatti">Contatti <span>06</span></a>
+    <a href="#contatti" class="btn">Richiedi una consulenza gratuita <span class="arrow">→</span></a>
+  </div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <canvas id="synapse" aria-hidden="true"></canvas>
+      <div class="container hero__content">
+        <p class="eyebrow">No-Code Developer &amp; UX Architect · Palermo</p>
+        <h1 id="hero-title">
+          <span class="line"><span>Software che parla</span></span>
+          <span class="line"><span>la lingua <em class="serif">della mente</em></span></span>
+          <span class="line"><span>dei tuoi utenti.</span></span>
+        </h1>
+        <p class="hero__sub">
+          Unisco lo sviluppo su <strong>Bubble.io</strong> e le integrazioni AI a un background in
+          <strong>psicologia cognitiva e neuropsicologia</strong>. Trasformo la tua idea in un prodotto funzionante,
+          scalabile e progettato sui reali modelli mentali di chi lo userà.
+        </p>
+        <div class="hero__ctas">
+          <a href="#contatti" class="btn">Parlami della tua idea <span class="arrow">→</span></a>
+          <a href="#progetti" class="btn btn--ghost">Guarda i progetti</a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="stat">
+            <div class="stat__num"><span data-count="2">2</span></div>
+            <div class="stat__label">SaaS sviluppati su Bubble: Easy Asset e YouGest</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-count="10">10</span><sup>+</sup></div>
+            <div class="stat__label">anni di osservazione comportamentale e UX research</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-count="3">3</span></div>
+            <div class="stat__label">master: neuroscienze, neuropsicologia, digital marketing</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">AI</div>
+            <div class="stat__label">integrazioni Claude API, n8n, Make e Zapier</div>
+          </div>
+        </div>
+      </div>
+      <a href="#chi-sono" class="scroll-cue" aria-label="Scorri alla sezione Chi sono">Scorri <i></i></a>
+    </section>
+
+    <!-- ===================== CHI SONO ===================== -->
+    <section id="chi-sono" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="reveal">
+          <div class="portrait">
+            <!-- SEGNAPOSTO FOTO: sostituisci il div qui sotto con
+                 <img src="img/angela-giambona.jpg" alt="Ritratto di Angela Giambona" width="800" height="1000" loading="lazy" />
+                 (formato consigliato 4:5, almeno 800x1000 px, .webp o .jpg) -->
+            <div class="portrait__placeholder">[ Inserisci qui la tua foto · 4:5 ]</div>
+            <div class="portrait__badge"><span class="pulse"></span><span><b>Disponibile per nuovi progetti</b><br />Palermo · da remoto in tutta Italia</span></div>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal">01 · Chi sono</p>
+          <h2 id="about-title" class="reveal" data-delay="1">Psicologa di formazione, <em class="serif">sviluppatrice</em> per scelta.</h2>
+          <p class="reveal" data-delay="2">
+            Sono Angela Giambona, sviluppatrice no-code e UX architect. Il mio posizionamento è unico:
+            unisco lo sviluppo tecnico su Bubble.io a un solido background scientifico in
+            <strong>psicologia cognitiva e neuropsicologia clinica</strong>, completato da un master in neuroscienze e uno in digital marketing.
+          </p>
+          <p class="reveal" data-delay="2">
+            Cosa significa per il tuo business? Che non mi limito a scrivere logiche e collegare database:
+            progetto software basati su come le persone percepiscono, decidono e agiscono, per ridurre l'abbandono
+            e rendere l'onboarding immediato. La stessa competenza la porto in siti web, SEO e strategie di neuromarketing.
+          </p>
+          <div class="pillars">
+            <div class="pillar reveal" data-delay="1"><b>Mente</b><span>Psicologia clinica, neuroscienze e neuropsicologia applicate alla UX.</span></div>
+            <div class="pillar reveal" data-delay="2"><b>Codice</b><span>Bubble.io, vibe coding con Lovable, API e automazioni.</span></div>
+            <div class="pillar reveal" data-delay="3"><b>Mercato</b><span>Digital marketing, SEO tecnico e neuromarketing.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== APPROCCIO ===================== -->
+    <section id="approccio" class="dark" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">02 · Approccio</p>
+            <h2 id="approach-title" class="reveal" data-delay="1">UX cognitiva: si parte da <em class="serif">come pensa</em> l'utente.</h2>
+          </div>
+          <p class="lead reveal" data-delay="2">
+            Dal 2016 progetto percorsi basati sull'osservazione comportamentale. È un metodo scientifico che si trasferisce
+            direttamente alla definizione dei requisiti software e alla progettazione di interfacce.
+          </p>
+        </div>
+
+        <div class="approach">
+          <article class="approach__item reveal">
+            <span class="approach__num">01 / OSSERVARE</span>
+            <svg class="approach__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="7"/><path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"/></svg>
+            <h3>Modelli mentali</h3>
+            <p>Intercetto i pain point e il modo in cui i tuoi utenti organizzano informazioni e decisioni, prima di scrivere una sola riga di logica.</p>
+          </article>
+          <article class="approach__item reveal" data-delay="1">
+            <span class="approach__num">02 / COSTRUIRE</span>
+            <svg class="approach__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="8" width="36" height="28" rx="4"/><path d="M6 16h36M18 42h12M24 36v6M15 24l4 4-4 4M24 32h8"/></svg>
+            <h3>Sviluppo no-code</h3>
+            <p>Database relazionale, workflow e interfaccia su Bubble.io: dall'MVP al prodotto finito, in tempi brevi e con un ottimo rapporto qualità/prezzo.</p>
+          </article>
+          <article class="approach__item reveal" data-delay="2">
+            <span class="approach__num">03 / VALIDARE</span>
+            <svg class="approach__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 38 18 24l8 8 16-20"/><path d="M34 12h8v8"/></svg>
+            <h3>Test e iterazione</h3>
+            <p>Test con professionisti del settore, feedback strutturati e ottimizzazione continua. Il prodotto cresce con la tua attività.</p>
+          </article>
+        </div>
+
+        <p class="quote-band reveal">“Non mi limito a collegare database: progetto software <strong>sulla mente</strong> di chi li userà.”</p>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIZI ===================== -->
+    <section id="servizi" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">03 · Servizi</p>
+            <h2 id="services-title" class="reveal" data-delay="1">Cosa posso fare <em class="serif">per te</em>.</h2>
+          </div>
+          <p class="lead reveal" data-delay="2">Soluzioni su misura per portare online la tua attività, ottimizzare il lavoro e farti trovare dai clienti giusti.</p>
+        </div>
+
+        <div class="services">
+          <article class="service reveal" data-tilt>
+            <div class="service__top">
+              <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+              <span class="service__tag">Bubble.io</span>
+            </div>
+            <h3>Applicazioni e SaaS no-code</h3>
+            <p>Strumenti personalizzati per professionisti e aziende, per ridurre tempi, energie e costi.</p>
+            <ul>
+              <li>Dall'idea all'MVP, fino al prodotto finito</li>
+              <li>Revisione e nuove funzionalità su app esistenti</li>
+              <li>Architettura scalabile, pronta per abbonamenti e modelli a consumo</li>
+            </ul>
+          </article>
+
+          <article class="service reveal" data-delay="1" data-tilt>
+            <div class="service__top">
+              <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M5.6 6.4 9.8 10M18.4 6.4 14.2 10M5.6 17.6l4.2-3.6M18.4 17.6l-4.2-3.6"/></svg></div>
+              <span class="service__tag">AI &amp; API</span>
+            </div>
+            <h3>Integrazioni AI e automazioni</h3>
+            <p>Funzioni intelligenti dentro i tuoi strumenti, per far lavorare i dati al posto tuo.</p>
+            <ul>
+              <li>Integrazione dell'API di Claude (Anthropic) per analisi e report</li>
+              <li>Automazioni con n8n, Make e Zapier</li>
+              <li>Privacy-by-design e attenzione alla conformità GDPR</li>
+            </ul>
+          </article>
+
+          <article class="service reveal" data-tilt>
+            <div class="service__top">
+              <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8h19M8 21h8M6 6h.01M8.5 6h.01"/></svg></div>
+              <span class="service__tag">Web</span>
+            </div>
+            <h3>Siti web ed e-commerce</h3>
+            <p>Belli da vedere ma soprattutto facili da usare: chi arriva trova subito ciò che cerca.</p>
+            <div class="packages">
+              <div class="package"><b>Easy</b><span>Presenza online di base, SEO e privacy policy</span></div>
+              <div class="package"><b>Professional</b><span>Area riservata, newsletter, pagamenti, report</span></div>
+              <div class="package"><b>Advanced</b><span>E-commerce con catalogo, carrello e account cliente</span></div>
+            </div>
+          </article>
+
+          <article class="service reveal" data-delay="1" data-tilt>
+            <div class="service__top">
+              <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9.5 3.5a3.5 3.5 0 0 0-3.4 4.3A3.5 3.5 0 0 0 4 14a3.5 3.5 0 0 0 4 5.4 3 3 0 0 0 4 .1V4.6a3 3 0 0 0-2.5-1.1Z"/><path d="M14.5 3.5a3.5 3.5 0 0 1 3.4 4.3A3.5 3.5 0 0 1 20 14a3.5 3.5 0 0 1-4 5.4 3 3 0 0 1-4 .1"/></svg></div>
+              <span class="service__tag">Growth</span>
+            </div>
+            <h3>Neuromarketing, SEO e campagne</h3>
+            <p>Visibilità costruita su dati e su come le persone prendono davvero le decisioni.</p>
+            <ul>
+              <li>Analisi SEO tecnica di siti esistenti</li>
+              <li>Piano di marketing: brand identity, buyer personas, SWOT, obiettivi SMART</li>
+              <li>Campagne, contenuti ottimizzati e monitoraggio KPI con Google Analytics</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TECH STACK ===================== -->
+    <div class="stack" aria-labelledby="stack-title">
+      <p class="stack__title" id="stack-title">Il mio tech stack</p>
+      <div class="marquee-wrap">
+        <div class="marquee">
+          <span class="tool">Bubble.io <small>dev</small></span>
+          <span class="tool">Lovable <small>vibe coding</small></span>
+          <span class="tool">Claude API <small>AI</small></span>
+          <span class="tool">n8n <small>automation</small></span>
+          <span class="tool">Make <small>automation</small></span>
+          <span class="tool">Zapier <small>automation</small></span>
+          <span class="tool">WordPress <small>web</small></span>
+          <span class="tool">Notion <small>dev</small></span>
+          <span class="tool">Airtable <small>data</small></span>
+          <span class="tool">Adobe <small>design</small></span>
+          <span class="tool">Google Analytics <small>growth</small></span>
+          <span class="tool">SEO tecnico <small>growth</small></span>
+          <!-- duplicato per lo scorrimento continuo -->
+          <span class="tool" aria-hidden="true">Bubble.io <small>dev</small></span>
+          <span class="tool" aria-hidden="true">Lovable <small>vibe coding</small></span>
+          <span class="tool" aria-hidden="true">Claude API <small>AI</small></span>
+          <span class="tool" aria-hidden="true">n8n <small>automation</small></span>
+          <span class="tool" aria-hidden="true">Make <small>automation</small></span>
+          <span class="tool" aria-hidden="true">Zapier <small>automation</small></span>
+          <span class="tool" aria-hidden="true">WordPress <small>web</small></span>
+          <span class="tool" aria-hidden="true">Notion <small>dev</small></span>
+          <span class="tool" aria-hidden="true">Airtable <small>data</small></span>
+          <span class="tool" aria-hidden="true">Adobe <small>design</small></span>
+          <span class="tool" aria-hidden="true">Google Analytics <small>growth</small></span>
+          <span class="tool" aria-hidden="true">SEO tecnico <small>growth</small></span>
+        </div>
+      </div>
+      <div class="container stack-grid">
+        <div class="stack-col"><h4>Development</h4><p>Bubble.io, Lovable, Notion, WordPress</p></div>
+        <div class="stack-col"><h4>Automations</h4><p>Make, Zapier, n8n</p></div>
+        <div class="stack-col"><h4>AI</h4><p>Anthropic Claude API</p></div>
+        <div class="stack-col"><h4>UX/UI &amp; Data</h4><p>UX Research, Adobe, Airtable, Excel</p></div>
+        <div class="stack-col"><h4>Growth</h4><p>SEO tecnico, Google Analytics, neuromarketing</p></div>
+      </div>
+    </div>
+
+    <!-- ===================== PROGETTI ===================== -->
+    <section id="progetti" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">04 · Progetti</p>
+            <h2 id="projects-title" class="reveal" data-delay="1">Prodotti veri, <em class="serif">costruiti da zero</em>.</h2>
+          </div>
+          <p class="lead reveal" data-delay="2">Due SaaS progettati e sviluppati end-to-end su Bubble.io per i professionisti della crisi d'impresa e del sovraindebitamento.</p>
+        </div>
+
+        <div class="projects">
+          <!-- PROGETTO 1 -->
+          <article class="project reveal">
+            <div class="project__visual project__visual--a">
+              <!-- SEGNAPOSTO: sostituisci il mockup con uno screenshot reale
+                   <img src="img/easyasset.webp" alt="Dashboard di Easy Asset" loading="lazy" /> -->
+              <div class="mock" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <div class="mock__body">
+                  <div class="mock__side"><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="mock__main">
+                    <div class="mock__kpis"><i></i><i></i><i></i></div>
+                    <div class="mock__chart"><svg viewBox="0 0 200 100" preserveAspectRatio="none"><polyline points="0,80 30,70 60,74 90,50 120,56 150,30 200,22" fill="none" stroke="#FF6B4A" stroke-width="2.5"/><polyline points="0,90 40,86 80,88 120,72 160,76 200,60" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"/></svg></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__label">SaaS · Crisi d'impresa · CCII</span>
+              <h3>Easy Asset</h3>
+              <p class="project__desc">Infrastruttura applicativa che aiuta i professionisti a rispettare il Codice della Crisi d'Impresa e dell'Insolvenza, monitorando i segnali di crisi.</p>
+              <ul>
+                <li>Architettura ibrida: motore di calcolo deterministico in Java per l'estrazione dei bilanci XBRL e analisi semantica AI con Claude per report e alert qualitativi.</li>
+                <li>Workflow end-to-end: dall'acquisizione dei dati alle checklist di compliance, fino al report finale in PDF.</li>
+                <li>Privacy-by-design a "Zero Data Persistence" per ridurre il rischio di data breach e semplificare la conformità GDPR.</li>
+                <li>Modello di business a consumo e in abbonamento, con manutenzione evolutiva e aggiornamenti normativi.</li>
+              </ul>
+              <div class="chips"><span class="chip">Bubble.io</span><span class="chip">Claude API</span><span class="chip">Java</span><span class="chip">XBRL</span><span class="chip">GDPR</span></div>
+              <a class="link-arrow" href="https://easyasset.it" target="_blank" rel="noopener">Visita easyasset.it <span class="arrow">↗</span></a>
+            </div>
+          </article>
+
+          <!-- PROGETTO 2 -->
+          <article class="project reveal">
+            <div class="project__visual project__visual--b">
+              <!-- SEGNAPOSTO: sostituisci il mockup con uno screenshot reale
+                   <img src="img/yougest.webp" alt="Interfaccia di YouGest" loading="lazy" /> -->
+              <div class="mock" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <div class="mock__body">
+                  <div class="mock__side"><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="mock__main">
+                    <div class="mock__kpis"><i></i><i></i><i></i></div>
+                    <div class="mock__chart"><svg viewBox="0 0 200 100" preserveAspectRatio="none"><g fill="rgba(62,142,135,.85)"><rect x="12" y="55" width="18" height="45" rx="3"/><rect x="44" y="38" width="18" height="62" rx="3"/><rect x="76" y="62" width="18" height="38" rx="3"/><rect x="108" y="28" width="18" height="72" rx="3"/><rect x="140" y="45" width="18" height="55" rx="3"/></g><rect x="172" y="18" width="18" height="82" rx="3" fill="#FF6B4A"/></svg></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__label">SaaS · Gestionale · Sovraindebitamento</span>
+              <h3>YouGest</h3>
+              <p class="project__desc">Gestionale per i professionisti della crisi, predisposto per seguire le pratiche di sovraindebitamento.</p>
+              <ul>
+                <li>Sviluppo end-to-end su Bubble.io: database relazionale, logica dei workflow e interfaccia utente.</li>
+                <li>Interfaccia di UX cognitiva, calibrata sui modelli mentali degli utenti grazie all'esperienza neuropsicologica.</li>
+                <li>Test e validazione con professionisti del settore, con feedback strutturati e ottimizzazione iterativa.</li>
+                <li>Architettura pronta per future integrazioni API e automazioni con Make e Zapier.</li>
+              </ul>
+              <div class="chips"><span class="chip">Bubble.io</span><span class="chip">UX cognitiva</span><span class="chip">Database relazionale</span><span class="chip">Make / Zapier</span></div>
+              <a class="link-arrow" href="https://yougest.it" target="_blank" rel="noopener">Visita yougest.it <span class="arrow">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PERCORSO ===================== -->
+    <section id="percorso" class="dark" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">05 · Percorso</p>
+          <h2 id="journey-title" class="reveal" data-delay="1">Esperienze e <em class="serif">formazione</em>.</h2>
+        </div>
+
+        <div class="journey">
+          <div>
+            <h3 class="col-title reveal">Esperienza</h3>
+            <ol class="timeline">
+              <li class="reveal">
+                <span class="tl-date">MAG 2023 – OGGI</span>
+                <p class="tl-role">No-Code Developer &amp; UX/UI Specialist</p>
+                <p class="tl-org">Libera professionista · Palermo</p>
+                <p class="tl-desc">Progettazione e sviluppo integrale dei SaaS Easy Asset e YouGest su Bubble.io, con integrazioni AI e automazioni.</p>
+              </li>
+              <li class="reveal">
+                <span class="tl-date">LUG 2023 – OGGI</span>
+                <p class="tl-role">Operatrice call center</p>
+                <p class="tl-org">Konecta · Palermo</p>
+                <p class="tl-desc">Gestione dei flussi utenti e problem solving in tempo reale: una palestra quotidiana per intercettare i pain point dell'utente finale.</p>
+              </li>
+              <li class="reveal">
+                <span class="tl-date">2016 – OGGI</span>
+                <p class="tl-role">UX Research &amp; Human-Centered Design Specialist (neurodivergenze)</p>
+                <p class="tl-org">Palermo</p>
+                <p class="tl-desc">Progettazione di percorsi basati sull'osservazione comportamentale, un metodo trasferibile alla definizione dei requisiti software e alla UX.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="col-title reveal">Formazione</h3>
+            <ul class="edu">
+              <li class="reveal"><b>Master di 1° livello in Digital Marketing</b><span>start2impact University · 2022 – 2023</span></li>
+              <li class="reveal"><b>Master di 2° livello in Neuropsicologia: Brain Trainer</b><span>Assomensana · 2019</span></li>
+              <li class="reveal"><b>Master universitario di 2° livello in Neuroscienze</b><span>Università degli Studi di Messina · 2018</span></li>
+              <li class="reveal"><b>Laurea in Psicologia clinica</b><span>Università degli Studi di Palermo</span></li>
+              <li class="reveal"><b>Attestato in Grafica pubblicitaria e Web design</b><span>Artedata Istituto di Grafica, Firenze · 2003</span></li>
+            </ul>
+            <div class="certs reveal" aria-label="Certificazioni">
+              <span class="cert">Lovable &amp; Vibe Coding</span>
+              <span class="cert">Vibe Coding MVP</span>
+              <span class="cert">Prodotto con Lovable</span>
+              <span class="cert">Neuromarketing Strategy</span>
+              <span class="cert">AI &amp; ChatGPT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner">
+        <div>
+          <h2 id="cta-title" class="reveal">Da dove cominciamo?</h2>
+          <p class="reveal" data-delay="1">Hai un'idea da trasformare in app, un sito da rifare o vuoi farti trovare meglio online? La prima consulenza è gratuita.</p>
+        </div>
+        <a href="#contatti" class="btn btn--dark reveal" data-delay="2">Richiedi la consulenza gratuita <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATTI ===================== -->
+    <section id="contatti" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow reveal">06 · Contatti</p>
+          <h2 id="contact-title" class="reveal" data-delay="1">Parliamo della <em class="serif">tua idea</em>.</h2>
+          <p class="lead reveal" data-delay="2" style="margin-top:1.2rem">Raccontami il progetto in poche righe: ti rispondo con una prima valutazione e i passi successivi.</p>
+
+          <ul class="contact-list">
+            <li class="reveal">
+              <div class="contact-item">
+                <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <a href="mailto:a.giambona@hotmail.it" style="text-decoration:none"><small>Email</small><b>a.giambona@hotmail.it</b></a>
+                <button class="copy-btn" type="button" data-copy="a.giambona@hotmail.it" aria-label="Copia l'indirizzo email">Copia</button>
+              </div>
+            </li>
+            <li class="reveal" data-delay="1">
+              <!-- Numero con prefisso internazionale +39, necessario per wa.me -->
+              <a class="contact-item" href="https://wa.me/393384551622" target="_blank" rel="noopener">
+                <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 9c.3 2.6 2.4 5 5.2 5.6l1.2-1.2 1.9.8-.3 1.6c-3.9.4-8.5-3.9-8-7.6l1.6-.3.8 1.9L9.7 11"/></svg></span>
+                <span><small>WhatsApp</small><b>338 455 1622</b></span>
+              </a>
+            </li>
+            <li class="reveal" data-delay="2">
+              <a class="contact-item" href="https://www.linkedin.com/in/angelagiambona/" target="_blank" rel="noopener">
+                <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4V9.5Z"/></svg></span>
+                <span><small>LinkedIn</small><b>in/angelagiambona</b></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MODULO CONTATTI
+             Funziona subito aprendo il programma di posta dell'utente (mailto).
+             Per ricevere i messaggi senza mailto, collega un servizio come Formspree o Web3Forms:
+             1) crea il form sul servizio  2) imposta action="https://formspree.io/f/TUO_ID" e method="POST"
+             3) nello script in fondo imposta FORM_ENDPOINT con lo stesso URL. -->
+        <form class="form reveal" id="contactForm" data-delay="1" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="nome">Nome e cognome *</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="servizio">Di cosa hai bisogno?</label>
+            <select id="servizio" name="servizio">
+              <option>App o SaaS no-code</option>
+              <option>Integrazione AI / automazioni</option>
+              <option>Sito web o e-commerce</option>
+              <option>SEO, neuromarketing o campagne</option>
+              <option>Non lo so ancora, ne parliamo</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="messaggio">Raccontami la tua idea *</label>
+            <textarea id="messaggio" name="messaggio" required placeholder="Obiettivo, a chi si rivolge, tempistiche..."></textarea>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <span>Ho letto la <a href="https://www.iubenda.com/privacy-policy/55822935/legal" target="_blank" rel="noopener">privacy policy</a> e acconsento al trattamento dei dati per essere ricontattato/a. *</span>
+          </label>
+          <button class="btn" type="submit">Invia il messaggio <span class="arrow">→</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-note">Rispondo di solito entro 1–2 giorni lavorativi.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#top" class="brand"><span class="brand__mark">ag</span><span class="brand__name">Angela Giambona<small>No-Code · UX · Neuro</small></span></a>
+        <nav class="footer__links" aria-label="Link del footer">
+          <a href="#servizi">Servizi</a>
+          <a href="#progetti">Progetti</a>
+          <a href="#contatti">Contatti</a>
+          <a href="https://www.linkedin.com/in/angelagiambona/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="footer__legal">
+        <span>© <span id="year">2026</span> Angela Giambona · P.IVA 07182580824</span>
+        <span>
+          <a href="https://www.iubenda.com/privacy-policy/55822935/legal" target="_blank" rel="noopener">Privacy Policy</a> ·
+          <a href="https://www.iubenda.com/privacy-policy/55822935/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+        </span>
+      </div>
+      <!-- SEGNAPOSTO: se usi Google Analytics o altri cookie non tecnici, reinserisci qui lo script del banner iubenda -->
+    </div>
+  </footer>
+
+  <a class="wa-float" id="waFloat" href="https://wa.me/393384551622" target="_blank" rel="noopener" aria-label="Scrivimi su WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 6 6 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6ZM20.4 3.5A11.8 11.8 0 0 0 1.8 17.7L.1 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.6-8.5Z"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const $ = (s, el = document) => el.querySelector(s);
+    const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+    /* ---------- Anno nel footer ---------- */
+    $('#year').textContent = new Date().getFullYear();
+
+    /* ---------- Toast ---------- */
+    const toast = $('#toast');
+    let toastTimer;
+    const showToast = (msg) => {
+      toast.textContent = msg;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2400);
+    };
+
+    /* ---------- Nav: stato scroll + WhatsApp flottante ---------- */
+    const nav = $('#nav');
+    const wa = $('#waFloat');
+    const onScroll = () => {
+      const y = window.scrollY;
+      nav.classList.toggle('is-scrolled', y > 40);
+      wa.classList.toggle('is-visible', y > window.innerHeight * 0.7);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Menu mobile ---------- */
+    const toggle = $('#navToggle');
+    const menu = $('#mobileMenu');
+    const setMenu = (open) => {
+      nav.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+      menu.setAttribute('aria-hidden', !open);
+      if (open) nav.classList.add('is-scrolled'); else onScroll();
+    };
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+    $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+    /* ---------- Link attivo nel menu (scroll spy) ---------- */
+    const links = $$('.nav__links a');
+    const sections = links.map(a => $(a.getAttribute('href'))).filter(Boolean);
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => spy.observe(s));
+
+    /* ---------- Reveal on scroll ---------- */
+    const revealer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    $$('.reveal').forEach(el => revealer.observe(el));
+
+    /* ---------- Contatori animati ---------- */
+    const counters = $$('[data-count]');
+    if (!reduceMotion) counters.forEach(c => c.textContent = '0');
+    const countUp = (el) => {
+      const target = +el.dataset.count;
+      if (reduceMotion) { el.textContent = target; return; }
+      const start = performance.now(), dur = 1400;
+      const tick = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { countUp(e.target); counterObs.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(c => counterObs.observe(c));
+
+    /* ---------- Bagliore che segue il cursore su bottoni e card ---------- */
+    $$('.btn, .service').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    /* ---------- Leggero tilt 3D sulle card servizi (solo desktop) ---------- */
+    if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+      $$('[data-tilt]').forEach(card => {
+        card.addEventListener('pointermove', e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(900px) rotateX(${(-y * 4).toFixed(2)}deg) rotateY(${(x * 4).toFixed(2)}deg) translateY(-4px)`;
+        });
+        card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+      });
+    }
+
+    /* ---------- Copia email ---------- */
+    $$('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async e => {
+        e.preventDefault(); e.stopPropagation();
+        try { await navigator.clipboard.writeText(btn.dataset.copy); showToast('Email copiata negli appunti ✓'); }
+        catch { showToast(btn.dataset.copy); }
+      });
+    });
+
+    /* ---------- Modulo contatti ---------- */
+    // SEGNAPOSTO: incolla qui l'endpoint di Formspree/Web3Forms per ricevere i messaggi direttamente.
+    // Se resta vuoto, il modulo apre il programma di posta con il messaggio già compilato.
+    const FORM_ENDPOINT = '';
+    const form = $('#contactForm');
+    const status = $('#formStatus');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        status.style.color = 'var(--accent-deep)';
+        status.textContent = 'Compila i campi obbligatori e accetta la privacy policy.';
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form));
+      status.style.color = 'var(--teal)';
+
+      if (FORM_ENDPOINT) {
+        status.textContent = 'Invio in corso…';
+        try {
+          const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+          if (!res.ok) throw new Error();
+          form.reset();
+          status.textContent = 'Grazie! Messaggio inviato, ti risponderò a breve.';
+        } catch {
+          status.style.color = 'var(--accent-deep)';
+          status.textContent = 'Qualcosa non ha funzionato. Scrivimi a a.giambona@hotmail.it.';
+        }
+        return;
+      }
+
+      const subject = encodeURIComponent(`Richiesta dal sito: ${data.servizio}`);
+      const body = encodeURIComponent(`Nome: ${data.nome}\nEmail: ${data.email}\nServizio: ${data.servizio}\n\n${data.messaggio}`);
+      window.location.href = `mailto:a.giambona@hotmail.it?subject=${subject}&body=${body}`;
+      status.textContent = 'Si sta aprendo il tuo programma di posta con il messaggio pronto da inviare.';
+    });
+
+    /* ---------- Rete neurale animata nell'hero ---------- */
+    const canvas = $('#synapse');
+    const ctx = canvas.getContext('2d');
+    let W, H, nodes = [], dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const mouse = { x: -9999, y: -9999 };
+
+    const build = () => {
+      const rect = canvas.getBoundingClientRect();
+      W = rect.width; H = rect.height;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.round(Math.min(90, Math.max(32, (W * H) / 16000)));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28,
+        r: Math.random() * 1.6 + 0.8,
+        hot: Math.random() < 0.12
+      }));
+    };
+
+    const LINK = 130;
+    const draw = () => {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
+          if (d < LINK) {
+            const alpha = (1 - d / LINK) * 0.35;
+            ctx.strokeStyle = (a.hot || b.hot) ? `rgba(255,107,74,${alpha})` : `rgba(201,203,212,${alpha * 0.6})`;
+            ctx.lineWidth = 0.8;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+        }
+        const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+        if (md < 180) {
+          ctx.strokeStyle = `rgba(255,107,74,${(1 - md / 180) * 0.5})`;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        }
+      }
+      nodes.forEach(n => {
+        ctx.fillStyle = n.hot ? '#FF6B4A' : 'rgba(245,241,234,.55)';
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.hot ? n.r + 0.8 : n.r, 0, Math.PI * 2); ctx.fill();
+      });
+    };
+
+    const step = () => {
+      nodes.forEach(n => {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+      });
+      draw();
+      if (running) raf = requestAnimationFrame(step);
+    };
+
+    let raf, running = false;
+    build();
+    if (reduceMotion) { draw(); }
+    else {
+      // anima solo quando l'hero è visibile, per risparmiare batteria
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting && !running) { running = true; step(); }
+        else if (!e.isIntersecting) { running = false; cancelAnimationFrame(raf); }
+      }).observe(canvas);
+    }
+    let resizeT;
+    window.addEventListener('resize', () => { clearTimeout(resizeT); resizeT = setTimeout(() => { build(); if (reduceMotion) draw(); }, 150); });
+    canvas.parentElement.addEventListener('pointermove', e => {
+      const r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+    });
+    canvas.parentElement.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  })();
+  </script>
+</body>
+</html>
